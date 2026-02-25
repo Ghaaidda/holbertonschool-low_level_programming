@@ -7,9 +7,14 @@
 int main(void)
 {
 char i = '0';
-for (i = '0'; i <= 'f'; i++)
+char j = 'a';
+for (i = '0'; i <= '9'; i++)
 {
 putchar(i);
+}
+for (j = 'a'; j <= 'f'; j++)
+{
+putchar(j);
 }
 putchar('\n');
 return (0);
