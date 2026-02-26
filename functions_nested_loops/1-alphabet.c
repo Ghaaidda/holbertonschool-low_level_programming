@@ -1,5 +1,8 @@
 #include "main.h"
-
+/**
+ * print_alphabet - writes lowercase alphabets in one line
+ *
+ */
 void print_alphabet(void)
 {
 char i = 'a';
