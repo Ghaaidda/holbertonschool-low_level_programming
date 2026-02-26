@@ -1,5 +1,4 @@
-#include <stdio.h>
-#include <main.h>
+#include "main.h"
 /**
  * main - Entry point
  *
@@ -7,6 +6,7 @@
  */
 int main(void)
 {
-printf("_putchar\n");
+char c = 'g';
+int _putchar(c);
 return (0);
 }
