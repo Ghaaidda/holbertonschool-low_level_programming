@@ -12,6 +12,6 @@ if (n < 0)
 {
 result = -result;
 }
-_putchar(result);
+_putchar(result + 0);
 return (result);
 }
