@@ -6,8 +6,8 @@
  */
 void jack_bauer(void)
 {
-int h = 0;
-int m = 0;
+char h = 0;
+char m = 0;
 for (h = 0; h < 24; h++)
 {
 if (h < 10)
