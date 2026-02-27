@@ -18,7 +18,11 @@ if (res > 9)
 _putchar((res / 10) + '0');
 _putchar((res % 10) + '0');
 }
+else
 _putchar(res + '0');
+}
+_putchar(',');
+_putchar(' ');
 j++;
 }
 _putchar('\n');
