@@ -22,8 +22,11 @@ else
 {
 _putchar(res + '0');
 }
+if (j < 9)
+{
 _putchar(',');
 _putchar(' ');
+}
 j++;
 }
 _putchar('\n');
