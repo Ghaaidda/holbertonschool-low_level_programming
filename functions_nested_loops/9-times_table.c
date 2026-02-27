@@ -30,8 +30,8 @@ _putchar(' ');
 else
 {
 _putchar('\n');
-j++;
 }
+j++;
 i++;
 }
 }
