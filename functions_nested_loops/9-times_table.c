@@ -27,9 +27,11 @@ if (j < 9)
 _putchar(',');
 _putchar(' ');
 }
+else
+{
+_putchar('\n');
 j++;
 }
-_putchar('\n');
 i++;
 }
 }
