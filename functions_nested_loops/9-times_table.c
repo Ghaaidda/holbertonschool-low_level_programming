@@ -12,7 +12,7 @@ while (i < 10)
 {
 while (j < 10)
 {
-_putchar((j * i);
+_putchar(j * i);
 _putchar(',');
 _putchar(' ');
 j++;
