@@ -6,32 +6,32 @@
  */
 void times_table(void)
 {
-int i = 0, j, res;
-while (i < 10)
+int i, j, res;
+for (i = 0; i < 10; i++)
 {
-j = 0;
-while (j < 10)
+for (j = 0; j < 10; j++)
 {
 res = i * j;
-if (res > 9)
+if (j == 0)
+{
+_putchar(res + '0');
+}
+else
+{
+_putchar(',');
+_putchar(' ');
+if (res < 10)
+{
+_putchar(' ');
+_putchar(res + '0');
+}
+else
 {
 _putchar((res / 10) + '0');
 _putchar((res % 10) + '0');
 }
-else if (res < 9 && j < 9)
-{
-_putchar(res + '0');
-_putchar(',');
-_putchar(' ');
-_putchar(' ');
 }
-else
-{
-_putchar(res + '0');
 }
 _putchar('\n');
-j++;
-}
-i++;
 }
 }
