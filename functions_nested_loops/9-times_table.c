@@ -18,19 +18,18 @@ if (res > 9)
 _putchar((res / 10) + '0');
 _putchar((res % 10) + '0');
 }
-else
+else if (res < 9 && j < 9)
 {
 _putchar(res + '0');
-}
-if (j < 9)
-{
 _putchar(',');
+_putchar(' ');
 _putchar(' ');
 }
 else
 {
-_putchar('\n');
+_putchar(res + '0');
 }
+_putchar('\n');
 j++;
 }
 i++;
