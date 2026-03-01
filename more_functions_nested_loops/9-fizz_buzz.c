@@ -2,7 +2,7 @@
 /**
  * main - Entry Point
  *
- * Return: void
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
@@ -26,4 +26,5 @@ else
 printf("%d ", i);
 }
 }
+return (0);
 }
