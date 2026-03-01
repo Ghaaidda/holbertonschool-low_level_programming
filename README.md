@@ -1,1 +1,1 @@
-This repo contains scripts for C basics project.
+This folder contains all scripts of More Functions and Nested Loops project.
