@@ -21,7 +21,7 @@ _putchar('_');
 }
 else
 {
-_pucthar('#');
+_putchar('#');
 }
 }
 _putchar('\n');
