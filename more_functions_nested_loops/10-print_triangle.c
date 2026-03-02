@@ -13,7 +13,7 @@ if (size > 0)
 {
 for (i = 0; i < size; i++)
 {
-for (j = size; j < 0; j--)
+for (j = size; j > 1; j--)
 {
 _putchar(' ');
 }
