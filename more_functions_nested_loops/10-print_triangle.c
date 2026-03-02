@@ -11,13 +11,19 @@ int i;
 int j;
 if (size > 0)
 {
-for (i = 0; i < size; i++)
+for (i = 1; i <= size; i++)
 {
-for (j = size; j > 1; j--)
+for (j = 1; j <= size; j++)
 {
-_putchar(' ');
+if ((i + j) <= size)
+{
+_putchar('_');
 }
-_putchar('#');
+else
+{
+_pucthar('#');
+}
+}
 _putchar('\n');
 }
 }
