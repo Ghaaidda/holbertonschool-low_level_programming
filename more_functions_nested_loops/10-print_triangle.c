@@ -17,7 +17,7 @@ for (j = 1; j <= size; j++)
 {
 if ((i + j) <= size)
 {
-_putchar('_');
+_putchar(' ');
 }
 else
 {
