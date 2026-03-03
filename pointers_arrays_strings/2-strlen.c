@@ -11,6 +11,7 @@ int length = 0;
 while (*s)
 {
 length += length;
+s++;
 }
 return (length);
 }
