@@ -14,12 +14,12 @@ while (*end)
 {
 end++;
 }
-while (*end != *start)
+while (end < start)
 {
+end--;
 hold = *start;
 *start = *end;
 *end = hold;
 start++;
-end--;
 }
 }
