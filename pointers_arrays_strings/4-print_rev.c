@@ -14,8 +14,8 @@ c++;
 }
 while (*c != *s)
 {
-_putchar(*c);
 c--;
+_putchar(*c);
 }
 _putchar(*c);
 }
