@@ -14,8 +14,9 @@ c++;
 }
 while (*c != *s)
 {
-_putchar(*(c+1));
+_putchar(*c);
 c--;
 }
-_putchar('\n');
+_putchar(*c);
+_putchar('\0');
 }
