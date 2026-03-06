@@ -7,20 +7,19 @@
  */
 void rev_string(char *s)
 {
-char *pts = s;
-char b;
-int len = 0;
-int i;
-while (*pts)
+char *start = s;
+char *end = s;
+char hold;
+while (*end)
 {
-len++;
-pts++;
+end++;
 }
-len /= 2;
-for (i =0; i <= len; i++)
+while (*end != *start)
 {
-b = s[len - i];
-s[len - i] = s[len + i];
-s[len + i] = b;
+hold = *start;
+*start = *end;
+*end = hold;
+start++;
+end--;
 }
 }
