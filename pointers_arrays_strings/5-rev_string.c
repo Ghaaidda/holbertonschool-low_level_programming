@@ -14,11 +14,8 @@ while (*end)
 {
 end++;
 }
-if (end > start)
-{
 end--;
-}
-while (end < start)
+while (start < end)
 {
 hold = *start;
 *start = *end;
