@@ -17,5 +17,5 @@ while (*c != *s)
 _putchar(*c);
 c--;
 }
-_putchar('\n');
+_putchar(*c);
 }
