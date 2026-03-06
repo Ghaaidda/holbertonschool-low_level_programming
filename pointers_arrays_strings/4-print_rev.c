@@ -18,5 +18,4 @@ _putchar(*c);
 c--;
 }
 _putchar(*c);
-_putchar('\0');
 }
