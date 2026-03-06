@@ -7,7 +7,11 @@
  */
 void print_rev(char *s)
 {
-char *c = s + _strlen(s);
+char *c = s;
+while (*c)
+{
+c++;
+}
 while (*c != *s)
 {
 _putchar(*c);
