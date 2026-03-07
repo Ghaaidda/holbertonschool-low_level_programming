@@ -21,6 +21,6 @@ else
 {
 return ((*s1 - *s2) + '0');
 }
-return (0);
 } while (*s1 && *s2);
+return (0);
 }
