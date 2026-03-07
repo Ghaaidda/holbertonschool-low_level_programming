@@ -16,9 +16,9 @@ while (*ptr1)
 ptr1++;
 i++;
 }
-while (src[i] && j < n)
+for (j = 0; src[i] && j < n; j++)
 {
-dest[i++] = src[j++];
+dest[i++] = src[j];
 ptr2++;
 }
 return (ptr3);
