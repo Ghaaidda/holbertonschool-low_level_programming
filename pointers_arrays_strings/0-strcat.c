@@ -12,9 +12,9 @@ char *ptr1 = dest, *ptr2 = src, *ptr3 = dest;
 int i = 0, j = 0;
 while (*ptr1)
 {
-ptr1++; 
+ptr1++;
 i++;
-}  
+}
 while (*ptr2)
 {
 dest[i++] = src[j++];
