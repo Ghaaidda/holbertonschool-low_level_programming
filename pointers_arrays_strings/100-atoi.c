@@ -3,7 +3,7 @@
  * _atoi - converts a string to an integer
  * @s: the string
  *
- * Return: The integer value of the converted string.
+ * Return: integer value
  */
 int _atoi(char *s)
 {
@@ -18,4 +18,3 @@ else if (num > 0)
 break;
 } while (*s++);
 return (num * sign);
-}
