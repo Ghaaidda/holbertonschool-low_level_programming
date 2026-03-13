@@ -9,7 +9,7 @@
 char *_strchr(char *s, char c)
 {
 char *p = s;
-while (*p)
+while (1)
 {
 if (*p == c)
 return (p);
