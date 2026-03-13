@@ -16,5 +16,5 @@ return (p);
 else
 p++;
 }
-return (NULL);
+return (0);
 }
