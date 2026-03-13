@@ -6,7 +6,7 @@
  *
  * Return: prefix lenght.
  */
-unsigned int _strspn(char *s, char *accept);
+unsigned int _strspn(char *s, char *accept)
 {
 unsigned int len = 0;
 int i;
