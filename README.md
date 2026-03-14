@@ -1,1 +1,1 @@
-This folder contains all scripts of More Functions and Nested Loops project.
+This folder contains holberton low level programming projects.
