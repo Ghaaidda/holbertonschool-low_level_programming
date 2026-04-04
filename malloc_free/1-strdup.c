@@ -8,10 +8,10 @@
  */
 char *_strdup(char *str)
 {
-if (!str)
-return (NULL);	
 char *pts;
 unsigned int i, len = 0;
+if (!str)
+return (NULL);
 for (i = 0; str[i]; i++)
 len++;
 pts = malloc(sizeof(char) * (len + 1));
