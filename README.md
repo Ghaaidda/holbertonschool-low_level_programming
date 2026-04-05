@@ -1,1 +1,1 @@
-This folder contains holberton low level programming projects.
+This folder contains tasks of the function pointers project.
