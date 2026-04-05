@@ -1,1 +1,1 @@
-This folder contains tasks of the function pointers project.
+This folder contains the projects of low-level-programming.
