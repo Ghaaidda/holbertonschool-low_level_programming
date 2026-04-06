@@ -1,4 +1,7 @@
 #include "calc.h"
+/**
+ * op_add - adds two integers
+ */
 int op_add(int a, int b)
 {
 return (a + b);
