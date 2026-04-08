@@ -10,15 +10,10 @@ if (argc > 4)
 {
 printf("Error");
 exit(98);
-/**
-* 1. use atoi to convert string to int
-*/
+}
 num1 = atoi(argv[0]);
 num2 = atoi(argv[2]);
 op = argv[1];
-/ **
-* 2. get desired function
-*/
 fptr = get_op_func(op);
 if (!get_op_func(op))
 {
@@ -30,9 +25,6 @@ if (fptr == op_div && num2 == 0)
 printf("Error");
 exit(100);
 }
-/ **
-* 3. Save results and print it to user
-*/
 result = fptr(num1, num2);
 printf("%d", result);
 return (0);
