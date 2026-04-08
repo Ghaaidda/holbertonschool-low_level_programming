@@ -1,5 +1,6 @@
 #include "3-calc.h"
 #include <stdio.h>
+#include <stdlib.h>
 int main(int argc, char *argv[])
 {
 int num1, num2, result;
@@ -9,13 +10,17 @@ if (argc > 4)
 {
 printf("Error");
 exit(98);
-// 1. use atoi to convert string to int
+/**
+* 1. use atoi to convert string to int
+*/
 num1 = atoi(argv[0]);
 num2 = atoi(argv[2]);
 op = argv[1];
-// 2. get desired function
-fptr = get_ops_func(op);
-if (!get_ops_func(op))
+/ **
+* 2. get desired function
+*/
+fptr = get_op_func(op);
+if (!get_op_func(op))
 {
 printf("Error");
 exit(99);
@@ -25,7 +30,9 @@ if (fptr == op_div && num2 == 0)
 printf("Error");
 exit(100);
 }
-// 3. Save results and print it to user
+/ **
+* 3. Save results and print it to user
+*/
 result = fptr(num1, num2);
 printf("%d", result);
 return (0);
