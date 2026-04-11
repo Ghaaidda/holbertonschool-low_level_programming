@@ -27,7 +27,7 @@ if (fptr  == NULL)
 printf("Error\n");
 exit(99);
 }
-if ((fptr == op_div || fpt == op_mod) && num2 == 0)
+if ((fptr == op_div || fptr == op_mod) && num2 == 0)
 {
 printf("Error\n");
 exit(100);
