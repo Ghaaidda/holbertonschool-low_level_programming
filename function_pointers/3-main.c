@@ -26,6 +26,6 @@ printf("Error");
 exit(100);
 }
 result = fptr(num1, num2);
-printf("%d", result);
+printf("%d\n", result);
 return (0);
 }
