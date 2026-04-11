@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <stdarg.h>
 /**
- * prin_strings - prints arguments
+ * print_strings - prints arguments
  * @separator: to separate the arguments
  * @n: number of args
  *
@@ -18,7 +18,7 @@ for (i = 0; i < n; i++)
 {
 str = va_arg(args, char *);
 if (str == NULL)
-printf("nil");
+printf("(nil)");
 else
 printf("%s", str);
 if (separator != NULL &&  i != (n - 1))
