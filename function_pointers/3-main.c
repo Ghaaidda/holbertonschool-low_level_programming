@@ -1,6 +1,13 @@
 #include "3-calc.h"
 #include <stdio.h>
 #include <stdlib.h>
+/**
+ * main - print the result of simple math operations
+ * @argc: count of arguments in program
+ * @argv: array of arguments in program
+ *
+ * Return: 0 when succesful.
+ */
 int main(int argc, char *argv[])
 {
 int num1, num2, result;
@@ -20,7 +27,7 @@ if (fptr  == NULL)
 printf("Error\n");
 exit(99);
 }
-if (fptr == op_div && num2 == 0)
+if ((fptr == op_div || fpt == op_mod) && num2 == 0)
 {
 printf("Error\n");
 exit(100);
