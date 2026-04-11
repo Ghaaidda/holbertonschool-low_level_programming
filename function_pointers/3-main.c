@@ -11,9 +11,9 @@ if (argc > 4)
 printf("Error");
 exit(98);
 }
-num1 = atoi(argv[0]);
-num2 = atoi(argv[2]);
-op = argv[1];
+num1 = atoi(argv[1]);
+num2 = atoi(argv[3]);
+op = argv[2];
 fptr = get_op_func(op);
 if (!get_op_func(op))
 {
