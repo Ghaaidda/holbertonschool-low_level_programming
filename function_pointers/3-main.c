@@ -6,7 +6,7 @@ int main(int argc, char *argv[])
 int num1, num2, result;
 int (*fptr)(int, int);
 char *op;
-if (argc > 4)
+if (argc != 4)
 {
 printf("Error");
 exit(98);
