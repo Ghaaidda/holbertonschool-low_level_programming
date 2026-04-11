@@ -15,7 +15,7 @@ num1 = atoi(argv[1]);
 num2 = atoi(argv[3]);
 op = argv[2];
 fptr = get_op_func(op);
-if (!get_op_func(op))
+if (get_op_func(op) == NULL)
 {
 printf("Error\n");
 exit(99);
