@@ -15,7 +15,8 @@ va_list args;
 va_start(args, n);  
 for (i = 0; i < n - 1; i++)
 {
-printf("%d%s", va_arg(args, int), separator);
-}
-printf("%d\n", va_arg(args, int));
+printf("%d", va_arg(args, int));
+if (separator != NULL || i != (n - 1))
+printf("%s", separator);
+printf("\n");
 }
