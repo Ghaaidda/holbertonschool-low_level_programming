@@ -9,7 +9,7 @@
 size_t print_list(const list_t *h)
 {
 	size_t count = 0;
-	list_t *p = h;
+	const list_t *p = h;
 	while (p)
 	{
 		if (p->str == NULL)
