@@ -9,11 +9,12 @@
 hash_table_t *hash_table_create(unsigned long int size)
 {
 	hash_table_t *new_ht = (hash_table_t *)malloc(sizeof(hash_table_t));
+	hash_node_t **array = NULL;
 
 	if (new_ht == NULL)
 		return (NULL);
 
-	hash_node_t **array = (hash_node_t **)malloc(sizeof(hash_node_t *) * size);
+	array = (hash_node_t **)malloc(sizeof(hash_node_t *) * size);
 
 	if (array == NULL)
 	{
