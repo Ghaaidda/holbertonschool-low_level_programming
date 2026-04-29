@@ -17,12 +17,11 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 
 	if (key == NULL)
 		return (0);
-	
-	hash = hash_djb2(key);
-	indx = key_index(hash, ht->size);
+
+	indx = key_index((const unsigned char *)key, ht->size);
 
 	/* update logic */
-	if (iht->array[indx] && strcmp(ht->array[indx]->key, key) == 0)
+	if (ht->array[indx] && strcmp(ht->array[indx]->key, key) == 0)
 	{
 		ht->array[indx]->value = value;
 		return (1);
