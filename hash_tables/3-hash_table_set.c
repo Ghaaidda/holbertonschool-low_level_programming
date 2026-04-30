@@ -12,7 +12,7 @@
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
 	hash_node_t *new_node;
-	unsigned long int hash;
+	hash_node_t *temp; /* for searching */
 	unsigned long int indx;
 
 	if (key == NULL)
@@ -20,11 +20,18 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 
 	indx = key_index((const unsigned char *)key, ht->size);
 
+	temp = ht->array[indx];
+
 	/* update logic */
-	if (ht->array[indx] && strcmp(ht->array[indx]->key, key) == 0)
+	while (temp)
 	{
-		ht->array[indx]->value = value;
-		return (1);
+		if (strcmp(temp->key, key) == 0)
+		{
+			free(temp->value);
+			temp->value = strdup(value);
+			return (1);
+		}
+		temp = temp->next;
 	}
 
 	/* new node logic */
