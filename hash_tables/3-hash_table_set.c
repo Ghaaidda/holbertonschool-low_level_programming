@@ -2,10 +2,11 @@
 #include <stdlib.h>
 #include <string.h>
 /**
- * add_new_node - adds a new node to bucket
+ * add - adds a new node to bucket
  * @ht: hash table
- * @key: key
- * @value: value
+ * @k: key
+ * @v: value
+ * @i: index
  *
  * Return: 1 success, 0 otherwise
  */
@@ -21,9 +22,9 @@ int add(hash_table_t *ht, const char *k, const char *v, unsigned long int i)
 
 		if (new_node->key && new_node->value == NULL)
 			return (0);
-		
+
 		new_node->next = NULL;
-		
+
 		if (ht->array[i] == NULL)
 		{
 		ht->array[i] = new_node;
