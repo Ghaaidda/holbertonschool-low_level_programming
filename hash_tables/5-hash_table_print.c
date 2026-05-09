@@ -11,7 +11,7 @@ void hash_table_print(const hash_table_t *ht)
 { 
     hash_node_t *temp; /* for traversing */
 	unsigned long int indx;
-    int flag = 0; /* for printing comma */
+    int flag = 1; /* for printing comma */
 
 	if (ht == NULL)
         return;
@@ -20,9 +20,9 @@ void hash_table_print(const hash_table_t *ht)
     for (indx = 0; indx < ht->size; indx++)
     {
         temp = ht->array[indx];
-        while(temp)
+        while(temp != NULL)
         {  
-            if (flag == 1)
+            if (!flag)
                 printf(", ");
                 
             printf("\'%s\': \'%s\', ", temp->key, temp->value);
