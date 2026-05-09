@@ -10,10 +10,10 @@
 */
 char *hash_table_get(const hash_table_t *ht, const char *key)
 {
-    hash_node_t *temp; /* for searching */
-    unsigned long int indx;
+	hash_node_t *temp; /* for searching */
+	unsigned long int indx;
 
-    if (ht == NULL || key == NULL)
+	if (ht == NULL || key == NULL)
 		return (NULL);
 
 	indx = key_index((const unsigned char *)key, ht->size);
