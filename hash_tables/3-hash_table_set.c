@@ -44,7 +44,7 @@ int add_new_node(hash_table_t *ht, const char *key, const char *value, unsigned 
  *
  * Return: 1 if addition successeds, 0 otherwise.
  */
-int hash_table_set(hash_table_t *ht, const char *key, const char *value, unsigned long int indx)
+int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
 	hash_node_t *temp; /* for searching */
 	unsigned long int indx;
@@ -67,5 +67,5 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value, unsigne
 		temp = temp->next;
 	}
 	/* new node logic */
-	return (add_new_node(ht, key, value));
+	return (add_new_node(ht, key, value, indx));
 }
