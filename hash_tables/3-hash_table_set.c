@@ -9,9 +9,8 @@
  *
  * Return: 1 success, 0 otherwise
  */
-int add_new_node(hash_table_t *ht, const char *key, const char *value)
+int add_new_node(hash_table_t *ht, const char *key, const char *value, unsigned long int indx)
 {
-		unsigned long int indx;
         hash_node_t *new_node = (hash_node_t *)malloc(sizeof(hash_node_t));
 
         if (new_node == NULL)
@@ -24,7 +23,6 @@ int add_new_node(hash_table_t *ht, const char *key, const char *value)
                 return (0);
 		
         new_node->next = NULL;
-		indx = key_index((const unsigned char *)key, ht->size);
 		
         if (ht->array[indx] == NULL)
         {
@@ -49,11 +47,12 @@ int add_new_node(hash_table_t *ht, const char *key, const char *value)
 int hash_table_set(hash_table_t *ht, const char *key, const char *value, unsigned long int indx)
 {
 	hash_node_t *temp; /* for searching */
-
+	unsigned long int indx;
+	
 	if (ht == NULL || key == NULL || value == NULL)
 		return (0);
 
-
+	indx = key_index((const unsigned char *)key, ht->size);
 	temp = ht->array[indx];
 
 	/* update logic */
