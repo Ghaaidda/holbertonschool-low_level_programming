@@ -9,17 +9,20 @@
 */
 void hash_table_print(const hash_table_t *ht)
 {
-	hash_node_t *temp; /* for searching */
-	unsigned long int indx = 0;
+	hash_node_t *temp; /* for traversing */
+	unsigned long int indx;
 
 	if (ht != NULL)
     {
         printf("{");
-        while (indx < ht->size)
+        for (indx = 0; ht->array[indx]; i++)
         {
-            printf("%s: %s", temp->key, temp->value);
-            temp = temp->next;
-            indx++;
+            temp = ht->array[indx];
+            while(temp)
+            {
+                printf("%s: %s", temp->key, temp->value);
+                temp = temp->next;
+            }    
         }
         printf("}\n");
     }
