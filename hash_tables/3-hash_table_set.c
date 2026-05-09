@@ -67,5 +67,5 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		temp = temp->next;
 	}
 	/* new node logic */
-	return (add_new_node(ht, key, value, indx));
+	return (add(ht, key, value, indx));
 }
