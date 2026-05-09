@@ -11,6 +11,7 @@
  */
 int add_new_node(hash_table_t *ht, const char *key, const char *value)
 {
+		unsigned long int indx;
         hash_node_t *new_node = (hash_node_t *)malloc(sizeof(hash_node_t));
 
         if (new_node == NULL)
@@ -21,8 +22,10 @@ int add_new_node(hash_table_t *ht, const char *key, const char *value)
 
         if (new_node->key && new_node->value == NULL)
                 return (0);
-
+		
         new_node->next = NULL;
+		indx = key_index((const unsigned char *)key, ht->size);
+		
         if (ht->array[indx] == NULL)
         {
                 ht->array[indx] = new_node;
@@ -43,15 +46,13 @@ int add_new_node(hash_table_t *ht, const char *key, const char *value)
  *
  * Return: 1 if addition successeds, 0 otherwise.
  */
-int hash_table_set(hash_table_t *ht, const char *key, const char *value)
+int hash_table_set(hash_table_t *ht, const char *key, const char *value, unsigned long int indx)
 {
 	hash_node_t *temp; /* for searching */
-	unsigned long int indx;
 
 	if (ht == NULL || key == NULL || value == NULL)
 		return (0);
 
-	indx = key_index((const unsigned char *)key, ht->size);
 
 	temp = ht->array[indx];
 
